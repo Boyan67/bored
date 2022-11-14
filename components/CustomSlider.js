@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from "react-native";
 import {Slider} from "@miblanchard/react-native-slider";
-import Images from "../assets";
 import {globalStyles} from "../styles/global";
 import {useTheme} from "@react-navigation/native";
 

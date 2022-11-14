@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, FlatList, Image, ScrollView, Text, View} from "react-native";
+import {FlatList, ScrollView, View} from "react-native";
 import {globalStyles} from "../styles/global";
 import { StyleSheet } from 'react-native';
 import GenerateButton from "../components/GenerateButton";
@@ -25,6 +25,7 @@ function Home({navigation}) {
         {id: 8, value:"music", image: Images.icons.music},
         {id: 9, value:"busywork", image: Images.icons.busywork}]
 
+
     return (
         <ScrollView style={globalStyles.container}>
             <Heading text={"bored"}/>
@@ -35,6 +36,7 @@ function Home({navigation}) {
             <FlatList
                 data={categories}
                 horizontal={true}
+                style={styles.categories}
                 keyExtractor={item => item.id}
                 renderItem={({item}) => (
                     <CategoryCard text={item.value} image={item.image}/>
@@ -43,7 +45,7 @@ function Home({navigation}) {
             <View style={styles.sliders}>
                 <CustomSlider text={"People"} state={peopleSlider} setState={setPeopleSlider} icon={Images.icons.people}/>
                 <CustomSlider text={"Price"} state={priceSlider} setState={setPriceSlider} icon={Images.icons.price}/>
-                <CustomSlider text={"Difficulty"} state={difficultySlider} setState={setDifficultySlider} icon={Images.icons.accessibility}/>
+                <CustomSlider text={"Accessibility"} state={difficultySlider} setState={setDifficultySlider} icon={Images.icons.accessibility}/>
             </View>
 
 
@@ -52,8 +54,8 @@ function Home({navigation}) {
 }
 
 const styles = StyleSheet.create({
-    sliders: {
-        paddingBottom: 20
+    categories: {
+        marginVertical: 10
     }
 });
 

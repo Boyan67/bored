@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity} from "react-native";
 import {globalStyles} from "../styles/global";
-import Images from "../assets";
 import {useTheme} from "@react-navigation/native";
 
 function CategoryCard({text, image}) {

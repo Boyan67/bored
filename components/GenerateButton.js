@@ -1,11 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {StyleSheet, Text, TouchableOpacity} from "react-native";
 import {LinearGradient} from "expo-linear-gradient";
 import {globalStyles} from "../styles/global";
 
 function GenerateButton({onPress}) {
     return (
-        <TouchableOpacity style={globalStyles.card} onPress={onPress}>
+        <TouchableOpacity style={[globalStyles.card, {marginTop: 10}]} onPress={onPress}>
             <LinearGradient
                 colors={['#2354D1', 'rgba(35,84,209,0.6)']}
                 style={[styles.background]}
@@ -21,7 +21,7 @@ function GenerateButton({onPress}) {
 const styles = StyleSheet.create({
     background: {
         paddingHorizontal: 30,
-        paddingVertical: 75,
+        paddingVertical: 80,
         backgroundColor: "#fff",
         borderRadius: 10,
     },

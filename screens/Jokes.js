@@ -1,10 +1,10 @@
 import React from 'react';
-import {ScrollView, Text, View} from "react-native";
+import {ScrollView} from "react-native";
 import {globalStyles} from "../styles/global";
 import Heading from "../components/Heading";
 import IconButton from "../components/IconButton";
 
-function Jokes(props) {
+function Jokes() {
     return (
         <ScrollView style={globalStyles.container}>
             <Heading text={"jokes"}/>

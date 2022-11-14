@@ -4,7 +4,7 @@ import {globalStyles} from "../styles/global";
 import Heading from "../components/Heading";
 import IconButton from "../components/IconButton";
 
-function Settings(props) {
+function Settings() {
     return (
         <ScrollView style={globalStyles.container}>
             <Heading text={"settings"}/>

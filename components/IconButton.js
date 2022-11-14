@@ -1,10 +1,9 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {Image, StyleSheet, Text, TouchableOpacity} from "react-native";
 import {globalStyles} from "../styles/global";
-import Images from "../assets";
 import {useTheme} from "@react-navigation/native";
 
-function IconButton({text, bgColor = "#fff", txtColor = "#333", onPress, icon}) {
+function IconButton({text, onPress, icon}) {
     const { colors } = useTheme();
     return (
         <TouchableOpacity

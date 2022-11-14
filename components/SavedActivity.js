@@ -1,8 +1,7 @@
 import React from 'react';
-import {Image, Share, Text, TouchableOpacity, View} from "react-native";
+import {Image, Text, TouchableOpacity, View} from "react-native";
 import {globalStyles} from "../styles/global";
 import Images from "../assets";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { StyleSheet } from 'react-native';
 import {useTheme} from "@react-navigation/native";
 
@@ -11,7 +10,7 @@ function SavedActivity({onPress, completed}) {
     return (
         <TouchableOpacity
             style={[globalStyles.card, styles.container,
-                {backgroundColor:completed ? "#f8f8f8" : colors.card, borderWidth: !completed ? 3 : 0, borderColor: "#2354D1"}]}
+                {backgroundColor:colors.card, borderWidth: !completed ? 3 : 0, borderColor: "#2354D1"}]}
             onPress={onPress}
         >
 
